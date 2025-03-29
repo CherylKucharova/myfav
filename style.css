@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/AppleGaramond.ttf') format('truetype'); /* Pastikan path sesuai */
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'CustomFont','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f7ebeb;
     color: #333;
     margin: 0;
@@ -21,6 +28,7 @@ header {
     font-size: 45px;
     font-weight: bold;
     color: black;
+    font-family: 'CustomFont';
 }
 
 nav ul {
@@ -48,6 +56,27 @@ nav ul li a:hover {
     background-color: #e0e0e0;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px); }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -56,7 +85,25 @@ nav ul li a:hover {
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    transform: translateY(30px);
+    opacity: 0; /* Mulai dari tidak terlihat */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    
+    /* Animasi hanya berjalan saat elemen masuk viewport */
+    view-timeline-name: --content-scroll;
+    view-timeline-axis: block;
+    animation-timeline: --content-scroll;
+    animation-range: entry 10% cover 30%;
 }
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(10);
+}
+
 
 header h1 {
     margin: 0;
@@ -70,6 +117,7 @@ section {
 }
 
 section h2 {
+    font-family: 'CustomFont';
     color: #000000;
     border-bottom: 2px solid #000000;
     padding-bottom: 5px;
@@ -85,7 +133,8 @@ section h2 {
 }
 
 .alasan {
-    font-size: 15px;
+    font-family: 'CustomFont';
+    font-size: 18px;
     margin-bottom: 2px;
 }
 
@@ -146,14 +195,15 @@ section h2 {
 
 .judul.image {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 10px;
+    text-decoration: underline;
 }
 
 .scene-scroll {
     display: flex;
     overflow-x: auto; /* Aktifkan scroll horizontal */
-    gap: 15px; /* Jarak antar gambar */
+    gap: 65px; /* Jarak antar gambar */
     padding: 10px;
     scroll-snap-type: x mandatory; /* Scroll akan "nempel" ke tiap item */
     white-space: nowrap;
@@ -171,6 +221,11 @@ section h2 {
 .scene-item {
     text-align: center;
     width: 200px; /* Ukuran gambar */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.scene-item:hover {
+    transform: scale(1.05);
 }
 
 .scene-item img {
@@ -193,14 +248,41 @@ section h2 {
     text-align: center;
 }
 
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Bisa disesuaikan */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.gf-bg {
+    width: 150%;
+    max-width: 899px; /* Lebar lebih besar dari gambar utama */
+    height: 400px;
+    filter: blur(1.5px);
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.5; /* Bisa diatur supaya tidak terlalu mencolok */
+}
+
 .gf {
-    width: 100%; /* Lebar penuh */
-    max-width: 675px; /* Maksimum agar tidak terlalu besar di layar besar */
-    height: 400px; /* Sesuaikan tinggi agar tetap proporsional */
+    width: 48%; /* Lebar penuh */
+    max-width: 600px; /* Maksimum agar tidak terlalu besar di layar besar */
+    height: auto; /* Sesuaikan tinggi agar tetap proporsional */
     object-fit: cover; /* Memastikan gambar ter-zoom tanpa distorsi */
     object-position: 50% 30%;
-    border-radius:5px; /* Opsional, untuk sudut melengkung */
+    border-radius:0px; /* Opsional, untuk sudut melengkung */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gf:hover {
+    transform: scale(1.05);
 }
 
 /* Deskripsi */
@@ -317,6 +399,8 @@ input#slide3:checked ~ .navigation label:nth-child(3) {
     text-decoration: none;
     transition: color 0.3s ease-in-out; 
     font-size: 20px;
+    font-family: 'CustomFont';
+    text-decoration: underline;
 }
 
 .louisewong a:hover {
