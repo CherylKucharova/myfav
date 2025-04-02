@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('fonts/AppleGaramond.ttf') format('truetype'); /* Pastikan path sesuai */
+    src: url('fonts/AppleGaramond.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -86,12 +86,11 @@ html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     transform: translateY(30px);
-    opacity: 0; /* Mulai dari tidak terlihat */
+    opacity: 0; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     transform: translateY(30px);
     animation: fadeInUp 1s ease-out forwards;
     
-    /* Animasi hanya berjalan saat elemen masuk viewport */
     view-timeline-name: --content-scroll;
     view-timeline-axis: block;
     animation-timeline: --content-scroll;
@@ -184,13 +183,13 @@ section h2 {
 }
 
 .stars a {
-    color: rgb(221, 0, 255); /* Warna awal biru */
+    color: rgb(221, 0, 255); 
     text-decoration: none;
-    transition: color 0.3s ease-in-out; /* Animasi perubahan warna */
+    transition: color 0.3s ease-in-out; 
 }
 
 .stars a:hover {
-    color: rgb(0, 21, 255); /* Warna berubah jadi merah saat hover */
+    color: rgb(0, 21, 255); 
 }
 
 .judul.image {
@@ -202,25 +201,23 @@ section h2 {
 
 .scene-scroll {
     display: flex;
-    overflow-x: auto; /* Aktifkan scroll horizontal */
-    gap: 65px; /* Jarak antar gambar */
+    overflow-x: auto;
+    gap: 65px; 
     padding: 10px;
-    scroll-snap-type: x mandatory; /* Scroll akan "nempel" ke tiap item */
+    scroll-snap-type: x mandatory; 
     white-space: nowrap;
 }
 
-/* Scene Image Container */
 .scene-container {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Jarak antar gambar */
+    gap: 15px; 
     padding: 10px 0;
 }
 
-/* Style tiap gambar dan deskripsinya */
 .scene-item {
     text-align: center;
-    width: 200px; /* Ukuran gambar */
+    width: 200px; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -240,7 +237,12 @@ section h2 {
     color: #333;
 }
 
-/* Header: Nama & Foto */
+.traileranita {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
 .celebrity-header {
     display: flex;
     flex-direction: column;
@@ -254,29 +256,29 @@ section h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 600px; /* Bisa disesuaikan */
+    max-width: 600px; 
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .gf-bg {
     width: 150%;
-    max-width: 899px; /* Lebar lebih besar dari gambar utama */
+    max-width: 899px; 
     height: 400px;
     filter: blur(1.5px);
     position: absolute;
     z-index: -1;
     object-fit: cover;
-    opacity: 0.5; /* Bisa diatur supaya tidak terlalu mencolok */
+    opacity: 0.5; 
 }
 
 .gf {
-    width: 48%; /* Lebar penuh */
-    max-width: 600px; /* Maksimum agar tidak terlalu besar di layar besar */
-    height: auto; /* Sesuaikan tinggi agar tetap proporsional */
-    object-fit: cover; /* Memastikan gambar ter-zoom tanpa distorsi */
+    width: 48%; 
+    max-width: 600px; 
+    height: auto; 
+    object-fit: cover; 
     object-position: 50% 30%;
-    border-radius:0px; /* Opsional, untuk sudut melengkung */
+    border-radius:0px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -285,20 +287,20 @@ section h2 {
     transform: scale(1.05);
 }
 
-/* Deskripsi */
 .lwdeskripsi {
     text-align: center;
     font-size: 14px;
     margin: 20px auto;
     max-width: 600px;
+    margin-top: 30px;
 }
 
-/* Slideshow */
 .slideshow-container {
     position: relative;
     max-width: 600px;
     margin: auto;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 .slides {
@@ -313,14 +315,22 @@ section h2 {
 }
 
 .slide img {
-    width: 100%;
-    border-radius: 10px;
+    width: 80%;
+    border-radius: 0px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.slide img:hover {
+    transform: scale(1.02);
 }
 
 .caption {
     text-align: center;
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 13px;
+    margin-top: 15px;
 }
 
 input[type="radio"] {
@@ -330,7 +340,7 @@ input[type="radio"] {
 .navigation {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .navigation label {
@@ -361,69 +371,176 @@ input#slide3:checked ~ .navigation label:nth-child(3) {
     background: black;
 }
 
-/* Social Media */
 .social-media {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 50px;
+    margin-top: 30px;
 }
 
 .social-card {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #f3f3f3, #e0e0e0);
+    padding: 8px 15px;
+    border-radius: 8px;
     text-align: center;
-    width: 120px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .social-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #e0e0e0, #d4d4d4);
 }
 
 .social-card img {
-    width: 40px;
-    margin-bottom: 5px;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.social-card p {
+.social-card:hover img {
+    transform: scale(1.1);
+}
+
+.social-card span {
+    font-family: "Arial", sans-serif;
     font-size: 14px;
     font-weight: bold;
+    color: #444;
 }
+
+.social-card a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 
 .louisewong a {
     color: rgb(221, 0, 255); 
     text-decoration: none;
     transition: color 0.3s ease-in-out; 
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'CustomFont';
-    text-decoration: underline;
 }
 
 .louisewong a:hover {
     color: rgb(4, 0, 255); 
-    font-size: 20px;
 }
 
 .desclw a {
-    color: rgb(221, 0, 255); /* Warna awal biru */
+    color: rgb(221, 0, 255); 
     text-decoration: none;
-    transition: color 0.3s ease-in-out; /* Animasi perubahan warna */
+    transition: color 0.3s ease-in-out; 
     font-size: 13px;
     font-style: bold;
 }
 
 .desclw a:hover {
-    color: rgb(0, 21, 255); /* Warna berubah jadi merah saat hover */
+    color: rgb(0, 21, 255); 
+}
+
+.alasan-container {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    gap: 20px; 
+    max-width: 800px; 
+    margin: auto; 
+}
+
+.alasanceleb {
+    font-family: "CustomFont";
+    margin-left: 25px;
+}
+
+.underlineLW {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+}
+
+.underlineLW::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 240%; 
+    height: 2px; 
+    background-color: black; 
 }
 
 .poinLW {
-    list-style-position: inside; /* Bulet ikut ke tengah */
-    padding: 0;
-    text-align: center;
-    font-size: 13px;
-    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.alasan-content {
+    flex: 1; 
+    text-align: left;
+    font-size: 14px;
+    margin-right: 20;
+    margin-top: 60px;
+}
+
+.alasan-img {
+    width: 250px; 
+    height: auto;
+    border-radius: 0px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-right: 35px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.alasan-img:hover {
+    transform: scale(1.05);
+}
+
+.album123{
+    display: flex; 
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.album-container {
+    transition: transform 0.2s ease-in-out;
+    
+}
+
+.album-container:hover {
+    transform: scale(1.05);
+}
+
+
+.judulalbum {
+    font-size: 20px; 
+    margin-bottom: 0px;
+}
+
+.artisalbum {
+    font-size: 15px; 
+    color: grey; 
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.spotify {
+    display: block;
+    margin: auto;
+    border-radius:12px; 
+    margin-bottom: 30px;
+    margin-top: opx;
+}
+
+.separator {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #bbb, transparent);
+    margin: 15px 0;
 }

@@ -21,11 +21,13 @@
 
         <section id="Movies">
         <div class="container">
-            <h2>Movies</h2>
+            <h2>Movie</h2>
                 <div style="display: flex; align-items: flex-start;">
                     <div class="poster-container">
-                        <img src="梅艷芳 (ANITA).jpeg" height="280" width="200" class="poster">
-                        <a href="https://youtu.be/Ig_QU-YDpcw?si=i6bL1WHQJlMmfvTQ" target="_blank" class="trailer-button">Watch Trailer</a>
+                        <img src="images/梅艷芳 (ANITA).jpeg" height="280" width="200" class="poster">
+                        <nav>
+                        <a href="#traileranita" class="trailer-button">Watch Trailer</a>
+                        </nav>
                     </div>
                     <div style="margin-left: 15px;">
                         <h3 class="judul" style="font-family: 'CustomFont'; font-size: 20px; margin-top:8px; margin-bottom: 2px;">
@@ -63,26 +65,29 @@
 
                     <div class="scene-scroll">
                         <div class="scene-item">
-                            <img src="louise wong solo.png" alt="Scene 1">
+                            <img src="images/louise wong solo.png" alt="Scene 1">
                             <p class="scene-desc">Louise Wong in Anita (2021)</p>
                         </div>
                         <div class="scene-item">
-                            <img src="anita2.png" alt="Scene 2">
+                            <img src="images/anita2.png" alt="Scene 2">
                             <p class="scene-desc">Louise Wong in Anita (2021)</p>
                         </div>
                         <div class="scene-item">
-                            <img src="KOO WONG.png" alt="Scene 3">
+                            <img src="images/KOOWONG.png" alt="Scene 3">
                             <p class="scene-desc">Louise Wong and Louis Koo <br> in Anita (2021)</p>
                         </div>
                         <div class="scene-item">
-                            <img src="anita3.png" alt="Scene 3">
+                            <img src="images/anita3.png" alt="Scene 3">
                             <p class="scene-desc">Louise Wong and Terrance Lau<br> in Anita (2021)</p>
                         </div>
                         <div class="scene-item">
-                            <img src="anita4.png" alt="Scene 3">
+                            <img src="images/anita4.png" alt="Scene 3">
                             <p class="scene-desc">Louise Wong and Fish Liew <br> in Anita (2021)</p>
                         </div>
                     </div>
+
+                    <h3 class="judul image" style="font-family: 'CustomFont'; text-align: center; margin-top:30px;">Trailer Video</h3>
+                    <iframe class="traileranita" id="traileranita" width="560" height="315" src="https://www.youtube.com/embed/Ig_QU-YDpcw?si=Qajq7RXwy5EU6BBO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         </section>
 
@@ -97,8 +102,8 @@
                         </a>
                     </span>
                     <div class="image-container">
-                        <img src="gf.jpg" class="gf-bg" alt="Louise Wong">
-                        <img src="gf.jpg" class="gf" alt="Louise Wong">
+                        <img src="images/gf.jpg" class="gf-bg" alt="Louise Wong">
+                        <img src="images/gf.jpg" class="gf" alt="Louise Wong">
                     </div>
                 </div>
         
@@ -130,85 +135,168 @@
                     </span>
                 </p>
 
-                <p class="alasan" style="text-align: center;"> <b>Alasan:</b> </p>
-                <ul class= "poinLW" style="text-align: center;">
-                    <li>Memiliki reputasi yang sangat baik di industri hiburan.</li>
-                    <li>Meraih berbagai pencapaian karier, termasuk nominasi dan penghargaan bergengsi <br> di tingkat nasional maupun internasional.</li>
-                    <li>Dikenal dengan sikapnya yang ramah, hangat, dan selalu dekat dengan para penggemar.</li>
-                </ul>
-
-                <!-- Social Media Buttons -->
-                <div class="social-media">
-                    <div class="social-card">
-                        <a href="https://www.instagram.com/louisewong" target="_blank">
-                            <img src="instagram-logo.png" alt="Instagram">
-                            <p>Instagram</p>
-                        </a>
+                <div class="alasan-container">
+                    <div class="alasan-content">
+                        <p class="alasanceleb" style="font-size: 25px;">
+                            <span class="underlineLW">
+                                <b>Alasan menyukai:</b>
+                            </span>
+                        </p>
+                        <ul class="poinLW">
+                            <li>Memiliki reputasi yang sangat baik di industri hiburan.</li>
+                            <li>Meraih berbagai pencapaian karier, termasuk nominasi dan penghargaan bergengsi di tingkat nasional maupun internasional.</li>
+                            <li>Dikenal dengan sikapnya yang ramah, hangat, dan selalu dekat dengan <br> para penggemar.</li>
+                        </ul>
                     </div>
-                    <div class="social-card">
-                        <a href="https://www.rednote.com/louisewong" target="_blank">
-                            <img src="rednote-logo.png" alt="Rednote">
-                            <p>Rednote</p>
-                        </a>
-                    </div>
-                    <div class="social-card">
-                        <a href="https://www.weibo.com/louisewong" target="_blank">
-                            <img src="weibo-logo.png" alt="Weibo">
-                            <p>Weibo</p>
-                        </a>
-                    </div>
-                    <div class="social-card">
-                        <a href="https://www.facebook.com/louisewong" target="_blank">
-                            <img src="facebook-logo.png" alt="Facebook">
-                            <p>Facebook</p>
-                        </a>
-                    </div>
+                    <img src="images/lwpacarku.jpg" alt="Alasan Gambar" class="alasan-img">
                 </div>
-        
-                <!-- Slideshow Image -->
+
                 <div class="slideshow-container">
                     <input type="radio" name="slide" id="slide1" checked>
                     <input type="radio" name="slide" id="slide2">
                     <input type="radio" name="slide" id="slide3">
         
+                    <h3 class="judul image" style="font-family: 'CustomFont'; text-align: center; margin-top:5px;">Images</h3>
+
                     <div class="slides">
                         <div class="slide">
-                            <img src="louise1.jpg" alt="Louise Wong 1">
-                            <div class="caption">Louise Wong in a fashion photoshoot.</div>
+                            <img src="images/hkffa.webp" alt="Louise Wong 1">
+                            <div class="caption">
+                                Pemenang Best New Performer, Louise Wong, berpose di pusat media Hong Kong Film Awards ke-40 di Kowloon Bay International Trade and Exhibition Centre, Juli 2022.
+                            </div>
                         </div>
                         <div class="slide">
-                            <img src="louise2.jpg" alt="Louise Wong 2">
-                            <div class="caption">Louise Wong in the movie Anita (2021).</div>
+                            <img src="images/linyue.webp" alt="Louise Wong 2">
+                            <div class="caption">Louise Wong tampil memukau dalam film terbarunya,
+                                <span class="desclw">
+                                  <a href="https://www.imdb.com/title/tt34603984/" taeget="_blank">
+                                    Hit n Fun, 
+                                    </a>
+                                </span>
+                                berperan sebagai Linyue.
+                            </div>
                         </div>
                         <div class="slide">
-                            <img src="louise3.jpg" alt="Louise Wong 3">
-                            <div class="caption">Elegant pose by Louise Wong.</div>
+                            <img src="images/youthlw.avif" alt="Louise Wong 3">
+                            <div class="caption">Louise Wong saat masih muda.</div>
                         </div>
                     </div>
         
-                    <!-- Navigation -->
                     <div class="navigation">
                         <label for="slide1"></label>
                         <label for="slide2"></label>
                         <label for="slide3"></label>
                     </div>
                 </div>
+                
+                <div class="social-media">
+                    <div class="social-card">
+                        <a href="https://www.instagram.com/l_for_louise/" target="_blank">
+                            <img src="images/ig.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    <div class="social-card">
+                        <a href="https://www.facebook.com/Louisewongtanni/" target="_blank">
+                            <img src="images/fb.jpg" alt="Facebook">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                    <div class="social-card">
+                        <a href="https://www.xiaohongshu.com/user/profile/62048c28000000002102ab92" target="_blank">
+                            <img src="images/xhs.jpg" alt="Rednote">
+                            <span>Rednote</span>
+                        </a>
+                    </div>
+                    <div class="social-card">
+                        <a href="https://weibo.com/u/7441094302" target="_blank">
+                            <img src="images/weibo.jpg" alt="Weibo">
+                            <span>Weibo</span>
+                        </a>
+                    </div>
+                </div>
+        
             </div>
         </section>
         
         <section id="albums">
             <div class="container">
                 <h2>Albums</h2>
-                    <img src="hmhas.png" height="250" width="250">
-                    <p><b>HIT ME HARD AND SOFT</b><br> Billie Eilish</p>
+        
+                <div class="album123">
+                    <div class="album-container">
+                        <img src="images/hmhas.png" height="250" width="250" class="album-cover">
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <h3 class="judulalbum">HIT ME HARD AND SOFT</h3>
+                        <h4 class="artisalbum">Billie Eilish</h4>
+                        <p class="deskripsi" style="font-size: 13px;">
+                            Album terbaru dari Billie Eilish yang penuh dengan emosi dan musikalitas yang unik. 
+                            Dengan lirik yang mendalam dan aransemen yang kreatif, album ini menjadi salah satu yang paling ditunggu tahun ini.
+                        </p>
+                        <p class="alasan"><b>Alasan menyukai:</b></p>
+                        <ul class="poin">
+                            <li>Produksi musik yang inovatif dan khas Billie Eilish.</li>
+                            <li>Lirik yang emosional dan relatable.</li>
+                            <li>Eksplorasi berbagai genre yang menarik.</li>
+                        </ul>
+                    </div>
+                </div>
+                <iframe class="spotify"  style="border-radius:12px" src="https://open.spotify.com/embed/album/7aJuG4TFXa2hmE4z1yxc3n?utm_source=generator" 
+                width="95%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
 
-                    <img src="saint motel.png" height="250" width="250">
-                    <p><b>刘艳芬</b><br>易烊千玺</p>
+                <div class="separator"></div>
 
-                    <img src="lyfen.png" height="250" width="250">
-                    <p><b>saintmoteltelevision</b><br>Saint Motel</p>
+                <div class="album123">
+                    <div class="album-container">
+                        <img src="images/saint motel.png" height="250" width="250" class="album-cover">
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <h3 class="judulalbum">刘艳芬</h3>
+                        <h4 class="artisalbum">易烊千玺</h4>
+                        <p class="deskripsi" style="font-size: 13px;">
+                            Album ini menghadirkan vokal yang lembut dengan melodi yang menenangkan, menciptakan suasana yang nostalgik dan emosional.
+                        </p>
+                        <p class="alasan"><b>Alasan menyukai:</b></p>
+                        <ul class="poin">
+                            <li>Vokal yang ekspresif dan menyentuh hati.</li>
+                            <li>Melodi yang indah dan menenangkan.</li>
+                            <li>Lirik yang memiliki makna mendalam.</li>
+                        </ul>
+                    </div>
+                </div>
+                <iframe class="spotify"  style="border-radius:12px" src="https://open.spotify.com/embed/album/33bvKuPSBbLncVZGgPPhmn?utm_source=generator" 
+                width="95%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+        
+                <div class="separator"></div>
+
+                <div class="album123">
+                    <div class="album-container">
+                        <img src="images/lyfen.png" height="250" width="250" class="album-cover">
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <h3 class="judulalbum">saintmoteltelevision</h3>
+                        <h4 class="artisalbum">Saint Motel</h4>
+                        <p class="deskripsi" style="font-size: 13px;">
+                            Album dengan nuansa indie pop yang enerjik dan penuh warna, menawarkan pengalaman mendengarkan yang menyenangkan.
+                        </p>
+                        <p class="alasan"><b>Alasan menyukai:</b></p>
+                        <ul class="poin">
+                            <li>Beat yang catchy dan mudah diingat.</li>
+                            <li>Energi positif dari setiap lagu.</li>
+                            <li>Vokal yang unik dan penuh karakter.</li>
+                        </ul>
+                    </div>
+                </div>
+                <iframe class="spotify" style="border-radius:12px" src="https://open.spotify.com/embed/album/43URJ507cdoIRy3GJdfxjs?utm_source=generator" 
+                width="95%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+        
             </div>
         </section>
+        
     <footer>
         <p>&copy; 2025 "My Favorite Things" oleh Cheryl Kucharova</p>
     </footer>
